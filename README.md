@@ -1,6 +1,6 @@
 # BobrovLabs
 # Задание 1 #
-  1. При написание команды `sudo yam install wget` появляется ошибка `is not a sudoers life`.
+  1. При написание команды `sudo yam install wget` появляется ошибка `is not a sudoers fife`.
   2. Для исправление ошибки нужно зайти под супер пользователя пишем команду `su` вводим пароль и открывам конфигурационый файл `vi /etc/sudoers` (рис. 1), где нужно добавить строку `bobrob  ALL=(ALL)       ALL`. Чтобы выйти и сохранить его из `vi` нужно нажать `ENSERT` -> `esc` -> `shift + ;` -> `wq!`
  
 <div align="center">
