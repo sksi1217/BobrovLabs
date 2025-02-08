@@ -31,12 +31,13 @@
   1. Устанавляваем `sudo yum install curl` (рис. 1).
       - `curl` - Название пакета, который нужно установить.
 <div align="center">
-   <img src="https://github.com/user-attachments/assets/10457610-416e-4589-ad9f-9b2ca8e48a33" alt="" width="500">
-   <p>Рисунок 1 - Устанавляваем curl</p>
+  <img src="https://github.com/user-attachments/assets/10457610-416e-4589-ad9f-9b2ca8e48a33" alt="Установка curl" width="500">
+  <p>Рисунок 1 - Установка curl</p>
 </div>
 
 # 2. Добавление репозитория Docker
-Чтобы установить актуальную версию Docker, необходимо добавить официальный репозиторий Docker в систему. Выполните следующую команду: `sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo` (рис. 2).
+Чтобы установить актуальную версию Docker, необходимо добавить официальный репозиторий Docker в систему. Выполните следующую команду (рис. 2).
+`sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo`
 
 - `sudo` - используется для выполнения команды с правами суперпользователя (root)
 - `wget` - это утилита командной строки для загрузки файлов с интернета
@@ -53,8 +54,8 @@
   После добавления репозитория можно приступить к установке Docker. Выполните следующую команду: `sudo yum install docker-ce docker-ce-cli containerd.io` (рис. 3).
   
 <div align="center">
-   <img src="https://github.com/user-attachments/assets/e36f040a-57a3-44fa-b4d1-67788d1d7cff](https://github.com/user-attachments/assets/0ba99c4e-0ce2-4c48-915d-dad181aff618" alt="" width="500">
-   <p>Рисунок 3 - устанавливаем Docker</p>
+  <img src="https://github.com/user-attachments/assets/0ba99c4e-0ce2-4c48-915d-dad181aff618" alt="Установка Docker" width="500">
+  <p>Рисунок 3 - Установка Docker</p>
 </div>
 
 # 4. Запуск службы Docker
@@ -66,6 +67,6 @@
 - `--now` — дополнительно к `enable` сразу запускает службу Docker (так же как и systemctl start docker).
 
 <div align="center">
-   <img src="https://github.com/user-attachments/assets/9ae78830-1916-455d-92ef-7e048172019c" alt="" width="500">
-   <p>Рисунок 4 - конфигурационый файл</p>
+  <img src="https://github.com/user-attachments/assets/9ae78830-1916-455d-92ef-7e048172019c" alt="Запуск службы Docker" width="500">
+  <p>Рисунок 4 - Запуск службы Docker</p>
 </div>
