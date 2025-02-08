@@ -17,7 +17,8 @@
 
 # 2 Пара #
 ## Задание 2 ##
-  1. Устанавляваем `sudo yum install curl` (рис. 1)
+  1. Устанавляваем `sudo yum install curl` (рис. 1).
+      - `curl` - Название пакета, который нужно установить.
 <div align="center">
    <img src="https://github.com/user-attachments/assets/10457610-416e-4589-ad9f-9b2ca8e48a33" alt="" width="500">
    <p>Рисунок 1 - Устанавляваем curl</p>
