@@ -18,21 +18,34 @@
 # 2 Пара #
 ## Задание 2 ##y
   1. Устанавляваем `sudo yum install curl` (рис. 1)
-     ![image](https://github.com/user-attachments/assets/10457610-416e-4589-ad9f-9b2ca8e48a33)
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/10457610-416e-4589-ad9f-9b2ca8e48a33" alt="" width="500">
+   <p>Рисунок 1 - Устанавляваем curl</p>
+</div>
 
-  3. Выполняем команду которая загрузит файла репозитория Docker `sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo`
-- `sudo` - используется для выполнения команды с правами суперпользователя (root)
-`wget` - это утилита командной строки для загрузки файлов с интернета
-`-P /etc/yum.repos.d/` - указывает путь, куда будет сохранен загруженный файл.
-`https://download.docker.com/linux/centos/docker-ce.repo` - URL-адрес файла репозитория Docker.
-![image](https://github.com/user-attachments/assets/e36f040a-57a3-44fa-b4d1-67788d1d7cff)
-  4. Команда устанавливает Docker и его компоненты на систему, использующую пакетный менеджер YUM `sudo yum install docker-ce docker-ce-cli containerd.io`
-  ![image](https://github.com/user-attachments/assets/0ba99c4e-0ce2-4c48-915d-dad181aff618)
+  3. Выполняем команду которая загрузит файла репозитория Docker `sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo` (рис. 2).
+      - `sudo` - используется для выполнения команды с правами суперпользователя (root)
+      - `wget` - это утилита командной строки для загрузки файлов с интернета
+      - `-P /etc/yum.repos.d/` - указывает путь, куда будет сохранен загруженный файл.
+      - `https://download.docker.com/linux/centos/docker-ce.repo` - URL-адрес файла репозитория Docker.
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/e36f040a-57a3-44fa-b4d1-67788d1d7cff" alt="" width="500">
+   <p>Рисунок 2 - загрузка файла репозитория Docker</p>
+</div>
 
-  5. Данная команда запускает службу Docker и включает её автозапуск при загрузке системы `sudo systemctl enable docker --now`
+
+  4. Команда устанавливает Docker и его компоненты на систему, использующую пакетный менеджер YUM `sudo yum install docker-ce docker-ce-cli containerd.io` (рис. 3).
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/e36f040a-57a3-44fa-b4d1-67788d1d7cff](https://github.com/user-attachments/assets/0ba99c4e-0ce2-4c48-915d-dad181aff618" alt="" width="500">
+   <p>Рисунок 3 - устанавливаем Docker</p>
+</div>
+
+
+  5. Данная команда запускает службу Docker и включает её автозапуск при загрузке системы `sudo systemctl enable docker --now` (рис. 4).
         - `systemctl` — это утилита для управления системными службами (сервисами) в Linux.
         - `enable` — добавляет службу в автозапуск, чтобы она автоматически стартовала при загрузке системы.
         - `--now` — дополнительно к `enable` сразу запускает службу Docker (так же как и systemctl start docker).
-  ![image](https://github.com/user-attachments/assets/9ae78830-1916-455d-92ef-7e048172019c)
-
-  6. 
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/9ae78830-1916-455d-92ef-7e048172019c" alt="" width="500">
+   <p>Рисунок 4 - конфигурационый файл</p>
+</div>
