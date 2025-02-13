@@ -20,12 +20,12 @@
 ***
 ## 1 Пара
 ## 1 Задание
-# Установка `wget`
+## Установка `wget`
 ## Содержание
 1. [Исправление ошибки is not a sudoers file](#1-исправление-ошибки-is-not-a-sudoers-file)
 2. [Установка wget](#2-установка-wget)
 
-# 1. Исправление ошибки `is not a sudoers file`
+## 1. Исправление ошибки `is not a sudoers file`
 При попытке выполнить команду:
 ```bash
 sudo yam install wget
@@ -52,7 +52,7 @@ bobrob  ALL=(ALL)  ALL
   <p>Рисунок 1 - Конфигурационный файл sudoers</p>
 </div>
 
- # 2. Установка wget
+ ## 2. Установка wget
  После завершения вышеописанных действий команда:
 ```bash
 sudo yum install wget
@@ -74,7 +74,7 @@ wget --version
 
 ## 2 Пара
 ## 2 Задание
-# Установка Docker
+## Установка Docker
 ## Содержание
 1. [Установка curl](#1-установка-curl)
 2. [Добавление репозитория Docker](#2-добавление-репозитория-docker)
@@ -82,7 +82,7 @@ wget --version
 4. [Запуск службы Docker](#4-запуск-службы-docker)
 
 
-# 1. Установка `curl`
+## 1. Установка `curl`
   1. Устанавляваем `sudo yum install curl` (рис. 1).
       - `curl` это инструмент для передачи данных с сервера или к серверу через URL.
 <div align="center">
@@ -90,7 +90,7 @@ wget --version
   <p>Рисунок 1 - Установка curl</p>
 </div>
 
-# 2. Добавление репозитория Docker
+## 2. Добавление репозитория Docker
 Чтобы установить актуальную версию Docker, необходимо добавить официальный репозиторий Docker в систему. Выполните следующую команду (рис. 2).
 `sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo`
 
@@ -105,7 +105,7 @@ wget --version
 </div>
 
 
-# 3. Установка Docker
+## 3. Установка Docker
   После добавления репозитория можно приступить к установке Docker. Выполните следующую команду: `sudo yum install docker-ce docker-ce-cli containerd.io` (рис. 3).
   
 <div align="center">
@@ -113,7 +113,7 @@ wget --version
   <p>Рисунок 3 - Установка Docker</p>
 </div>
 
-# 4. Запуск службы Docker
+## 4. Запуск службы Docker
 После установки необходимо запустить службу Docker и включить её автозапуск при загрузке системы. Выполните следующую команду (рис. 4).
 `sudo systemctl enable docker --now`
 
