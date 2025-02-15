@@ -179,7 +179,7 @@ sudo chmod +x /usr/bin/docker-compose
   ## 5.
 Скачиваем git через команду
 ```bash
-git clone https://github.com/skl256/grafana_stack_for_docker.git
+sudo yum install git
 ```
 
 ***
@@ -215,25 +215,50 @@ sudo mkdir -p /mnt/common_volume/swarm/grafana/config
 
 ***
 
+```bash
+sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus-data}
+```
+- Создает необходимую директорию для конфигурации Grafana
+
  ```bash
 sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}
 ```
-- Изменяет владельца созданных директорий на текущего пользователя
+- Создает необходимую директорию для конфигурации Grafana
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/4a2999e4-91a2-494e-80be-ad937f58f910" alt="Запуск службы Docker" width="500">
+  <p>Рисунок 1 - Создает необходимую директорию для конфигурации Grafana</p>
+</div
 
  ```bash
- touch /mnt/common_volume/grafana/grafana-config/grafana.ini
+touch /mnt/common_volume/grafana/grafana-config/grafana.ini
 ```
 - Создает пустой файл конфигурации grafana.ini
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ef08dcb3-6ae7-4735-8fc9-33a82bc42542" alt="Запуск службы Docker" width="500">
+  <p>Рисунок 1 - Создает необходимую директорию для конфигурации Grafana</p>
+</div
+
+***
 
  ```bash
 cp config/* /mnt/common_volume/swarm/grafana/config/
 ```
 - Копирует конфигурационные файлы из каталога config в созданную директорию
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/43bb35dc-8a26-4bbe-bab1-58fe57f51083" alt="Запуск службы Docker" width="500">
+  <p>Рисунок 1 - Создает необходимую директорию для конфигурации Grafana</p>
+</div
+
+***
 
  ```bash
 mv grafana.yaml docker-compose.yaml
 ```
 - Переименовывает файл конфигурации Docker Compose
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/8c19d45a-74d8-4f51-8216-c2cd70fc58e1" alt="Запуск службы Docker" width="500">
+  <p>Рисунок 1 - Создает необходимую директорию для конфигурации Grafana</p>
+</div
 
  ```bash
 sudo docker compose up -d
