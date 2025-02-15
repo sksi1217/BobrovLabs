@@ -128,4 +128,120 @@ wget --version
 
 ## 3 Пара
 ## 3 Задание
+## 1. Получает последнюю версию Docker Compose
+ ```bash
+   COMVER=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)
+   ```
+- Получает последнюю версию Docker Compose
+- Использует API GitHub для получения информации о последнем релизе
+- Вытаскивает номер версии из JSON ответа
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/272ab6c7-834b-4610-94fd-db408837f6f1" alt="Запуск службы Docker" width="500">
+  <p>Рисунок 1 - Получает последнюю версию Docker Compose</p>
+</div
 
+***
+
+## 2. Скачивает Docker Compose
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/$COMVER/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+```
+- Скачивает Docker Compose соответствующий системе
+- $COMVER - версия, полученная ранее
+- $(uname -s) - операционная система
+- $(uname -m) - архитектура процессора
+- Сохраняет в /usr/bin/docker-compose
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/f3d333ca-972f-4a7a-a07e-5a5b75db3984" alt="Запуск службы Docker" width="500">
+  <p>Рисунок 1 - Получает последнюю версию Docker Compose</p>
+</div
+
+
+***
+
+## 3. 
+ ```bash
+sudo chmod +x /usr/bin/docker-compose
+```
+- Дает исполняемые права файлу docker-compose
+
+***
+
+ ```bash
+ docker-compose --version
+```
+- Проверяет установленную версию Docker Compose
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/9f2f7176-da43-4ec8-a731-46343d4c85df" alt="Запуск службы Docker" width="500">
+  <p>Рисунок 1 - Получает последнюю версию Docker Compose</p>
+</div
+
+  ## 5.
+Скачиваем git через команду
+```bash
+git clone https://github.com/skl256/grafana_stack_for_docker.git
+```
+
+***
+
+ ```bash
+git clone https://github.com/skl256/grafana_stack_for_docker.git
+```
+- Клонирует репозиторий с конфигурацией Grafana
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/21bf6389-7f06-49e2-a933-169f0b64fbd4" alt="Запуск службы Docker" width="500">
+  <p>Рисунок 1 - Клонирует репозиторий с конфигурацией Grafana Compose</p>
+</div
+
+ ```bash
+cd grafana_stack_for_docker
+```
+- Переходит в склонированный каталог
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/dc65d9e3-648c-47b7-b04b-1eaebda3139b" alt="Запуск службы Docker" width="500">
+  <p>Рисунок 1 - Переходит в склонированный каталог</p>
+</div
+
+ ```bash
+sudo mkdir -p /mnt/common_volume/swarm/grafana/config
+```
+- Создает необходимую директорию для конфигурации Grafana
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e740760a-c2ad-4b57-9802-c2d5110d1dfa" alt="Запуск службы Docker" width="500">
+  <p>Рисунок 1 - Создает необходимую директорию для конфигурации Grafana</p>
+</div
+
+***
+
+ ```bash
+sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}
+```
+- Изменяет владельца созданных директорий на текущего пользователя
+
+ ```bash
+ touch /mnt/common_volume/grafana/grafana-config/grafana.ini
+```
+- Создает пустой файл конфигурации grafana.ini
+
+ ```bash
+cp config/* /mnt/common_volume/swarm/grafana/config/
+```
+- Копирует конфигурационные файлы из каталога config в созданную директорию
+
+ ```bash
+mv grafana.yaml docker-compose.yaml
+```
+- Переименовывает файл конфигурации Docker Compose
+
+ ```bash
+sudo docker compose up -d
+```
+- Запускает контейнеры Docker в фоновом режиме согласно docker-compose.yaml
+
+Этот набор команд:
+1. Устанавливает Docker Compose
+2. Клонирует репозиторий с конфигурацией Grafana
+3. Подготавливает необходимые директории и файлы конфигурации
+4. Запускает контейнеры Docker с Grafana используя Docker Compose
