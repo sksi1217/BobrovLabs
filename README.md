@@ -95,8 +95,9 @@ wget --version
 
 ---
 
-`sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo`
-
+```bash
+sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo
+```
 - `sudo` - используется для выполнения команды с правами суперпользователя (root)
 - `wget` - это утилита командной строки для загрузки файлов с интернета
 - `-P /etc/yum.repos.d/` - указывает путь, куда будет сохранен загруженный файл.
@@ -109,7 +110,10 @@ wget --version
 
 
 ## 3. Установка Docker
-  После добавления репозитория можно приступить к установке Docker. Выполните следующую команду: `sudo yum install docker-ce docker-ce-cli containerd.io` и соглашаемся со всеми `y` (рис. 3).
+  После добавления репозитория можно приступить к установке Docker. Выполните следующую команду и соглашаемся со всем `y` (рис. 3)
+ ```bash
+sudo yum install docker-ce docker-ce-cli containerd.io
+```
   
 <div align="center">
   <img src="https://github.com/user-attachments/assets/0ba99c4e-0ce2-4c48-915d-dad181aff618" alt="Установка Docker" width="500">
@@ -118,8 +122,9 @@ wget --version
 
 ## 4. Запуск службы Docker
 После установки необходимо запустить службу Docker и включить её автозапуск при загрузке системы. Выполните следующую команду (рис. 4).
-`sudo systemctl enable docker --now`
-
+ ```bash
+sudo systemctl enable docker --now
+```
 - `systemctl` — это утилита для управления системными службами (сервисами) в Linux.
 - `enable` — добавляет службу в автозапуск, чтобы она автоматически стартовала при загрузке системы.
 - `--now` — дополнительно к `enable` сразу запускает службу Docker (так же как и systemctl start docker).
@@ -160,7 +165,7 @@ COMVER=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | g
   
 <div align="center">
   <img src="https://github.com/user-attachments/assets/272ab6c7-834b-4610-94fd-db408837f6f1" alt="Получение версии Docker Compose" width="500">
-  <p>Рисунок 1: Получение последней версии Docker Compose</p>
+  <p>Рисунок 1 - Получение последней версии Docker Compose</p>
 </div>
 
 ---
@@ -194,7 +199,7 @@ docker-compose --version
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/9f2f7176-da43-4ec8-a731-46343d4c85df" alt="Проверка версии Docker Compose" width="500">
-  <p>Рисунок 2: Проверка установленной версии Docker Compose</p>
+  <p>Рисунок 2 - Проверка установленной версии Docker Compose</p>
 </div>
 
 ---
@@ -216,7 +221,7 @@ cd grafana_stack_for_docker
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/21bf6389-7f06-49e2-a933-169f0b64fbd4" alt="Клонирование репозитория" width="500">
-  <p>Рисунок 3: Клонирование репозитория с конфигурацией Grafana</p>
+  <p>Рисунок 3 - Клонирование репозитория с конфигурацией Grafana</p>
 </div>
 
 ---
@@ -272,7 +277,7 @@ mv grafana.yaml docker-compose.yaml
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/e740760a-c2ad-4b57-9802-c2d5110d1dfa" alt="Подготовка директорий" width="500">
-  <p>Рисунок 4: Подготовка директорий и файлов конфигурации</p>
+  <p>Рисунок 4 - Подготовка директорий и файлов конфигурации</p>
 </div>
 
 ---
@@ -289,7 +294,7 @@ sudo docker compose up -d
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/b50575f2-ba34-48a8-aa92-7fe7d1b5b71e" alt="Запуск контейнеров" width="500">
-  <p>Рисунок 5: Запуск контейнеров Docker</p>
+  <p>Рисунок 5 - Запуск контейнеров Docker</p>
 </div>
 
 ---
