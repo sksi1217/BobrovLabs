@@ -22,10 +22,10 @@
 ## 1 Задание
 ## Установка `wget`
 ## Содержание
-1. [Исправление ошибки is not a sudoers file](#1-исправление-ошибки-is-not-a-sudoers-file)
+1. [Исправление ошибки is not in the sudoers file](#1-исправление-ошибки-is-not-a-sudoers-file)
 2. [Установка wget](#2-установка-wget)
 
-## 1. Исправление ошибки `is not a sudoers file`
+## 1. Исправление ошибки `is not in the sudoers file`
 При попытке выполнить команду:
 ```bash
 sudo yam install wget
