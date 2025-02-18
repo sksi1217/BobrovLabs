@@ -109,7 +109,7 @@ wget --version
 
 
 ## 3. Установка Docker
-  После добавления репозитория можно приступить к установке Docker. Выполните следующую команду: `sudo yum install docker-ce docker-ce-cli containerd.io` (рис. 3).
+  После добавления репозитория можно приступить к установке Docker. Выполните следующую команду: `sudo yum install docker-ce docker-ce-cli containerd.io` и соглашаемся со всеми `y` (рис. 3).
   
 <div align="center">
   <img src="https://github.com/user-attachments/assets/0ba99c4e-0ce2-4c48-915d-dad181aff618" alt="Установка Docker" width="500">
@@ -223,23 +223,52 @@ cd grafana_stack_for_docker
 
 ### 5. Подготовка директорий и файлов конфигурации
 
-Создаем необходимые директории и файлы:
-
+Создаем необходимые директории и файлы (рис. 4):
 ```bash
 sudo mkdir -p /mnt/common_volume/swarm/grafana/config
+```
+- `sudo`: команда выполняется с правами суперпользователя.
+- `mkdir`: создает новую директорию.
+- `-p`: если родительские директории не существуют, они также будут созданы.
+- `/mnt/common_volume/swarm/grafana/config`: путь к новой директории, которая будет создана.
+
+```bash
 sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus-data}
+```
+- Создает три директории внутри `/mnt/common_volume/grafana/`:
+  - `grafana-config`
+  - `grafana-data`
+  - `prometheus-data`
+- `{}` используется для создания нескольких директорий одним вызовом `mkdir`.
+
+```bash
 sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}
+```
+- `chown`: изменяет владельца файла или директории.
+- `-R`: рекурсивно применяет изменения ко всем файлам и поддиректориям.
+- `$(id -u)`: возвращает UID текущего пользователя.
+- `$(id -g)`: возвращает GID группы текущего пользователя.
+- `{/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}`: список директорий, для которых меняется владелец.
+
+```bash
 touch /mnt/common_volume/grafana/grafana-config/grafana.ini
+```
+- `touch`: создает новый пустой файл (или обновляет метку времени существующего файла).
+- `/mnt/common_volume/grafana/grafana-config/grafana.ini`: путь к новому файлу.
+
+```bash
 cp config/* /mnt/common_volume/swarm/grafana/config/
+```
+- `cp`: копирует файлы.
+- `config/*`: все файлы из директории `config`.
+- `/mnt/common_volume/swarm/grafana/config/`: целевая директория, куда будут скопированы файлы.
+
+```bash
 mv grafana.yaml docker-compose.yaml
 ```
-
-- **Описание**:
-  - Создаем директории для хранения данных и конфигураций.
-  - Изменяем права доступа к созданным директориям.
-  - Создаем пустой файл конфигурации `grafana.ini`.
-  - Копируем конфигурационные файлы из каталога `config`.
-  - Переименовываем файл `grafana.yaml` в `docker-compose.yaml`.
+- `mv`: перемещает или переименовывает файл.
+- `grafana.yaml`: исходный файл.
+- `docker-compose.yaml`: новый файл (результат переименования).
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/e740760a-c2ad-4b57-9802-c2d5110d1dfa" alt="Подготовка директорий" width="500">
