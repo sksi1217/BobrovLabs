@@ -45,7 +45,7 @@ bobrob  ALL=(ALL)  ALL
 ```
 4. <b>Сохранить и выйти из редактора</b>:
 Чтобы сохранить изменения в vi, выполните следующие шаги:
-- Нажмите `ENSERT` -> `ESC` -> `shift + :` -> `:wq!` -> `Enter`.
+- Нажмите `ENSERT` -> `ESC` -> `shift + ;` -> `:wq!` -> `Enter`.
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/9d6756e4-5d5a-4019-9e2e-4089a9f14c67" alt="Конфигурационный файл sudoers" width="500">
