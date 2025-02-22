@@ -366,3 +366,11 @@ git clone https://github.com/sksi1217/BobrovLabs.git
   <img src="https://github.com/user-attachments/assets/18f91104-27cb-4b45-bfbb-210dbefee432" alt="Запуск контейнеров" width="500">
   <p>Рисунок 6 - Путь</p>
 </div>
+
+---
+
+```bash
+sudo mv BobrovLabs/prometeus.yaml grafana_stack_for_docker/
+sudo mv BobrovLabs/docker-compose.yaml grafana_stack_for_docker/
+```
+Перемещаем файлы в корень `grafana_stack_for_docker`
