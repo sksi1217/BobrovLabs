@@ -292,3 +292,86 @@ sudo docker compose up -d
 ---
 
 ## 4 Пара
+
+<div align="center">
+  <img src="" alt="Запуск контейнеров" width="500">
+  <p>Рисунок 1 - Запуск контейнеров Docker</p>
+</div>
+
+
+
+
+
+
+
+<div align="center">
+  <img src="" alt="Запуск контейнеров" width="500">
+  <p>Рисунок 1 - Запуск контейнеров Docker</p>
+</div>
+
+
+
+
+
+
+
+
+
+<div align="center">
+  <img src="" alt="Запуск контейнеров" width="500">
+  <p>Рисунок 1 - Запуск контейнеров Docker</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align="center">
+  <img src="" alt="Запуск контейнеров" width="500">
+  <p>Рисунок 1 - Запуск контейнеров Docker</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align="center">
+  <img src="" alt="Запуск контейнеров" width="500">
+  <p>Рисунок 1 - Запуск контейнеров Docker</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align="center">
+  <img src="" alt="Запуск контейнеров" width="500">
+  <p>Рисунок 1 - Запуск контейнеров Docker</p>
+</div>
