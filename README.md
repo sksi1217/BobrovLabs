@@ -348,38 +348,21 @@ sudo docker compose ps
   <p>Рисунок 4 - Запуск контейнеров Docker</p>
 </div>
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
+Командой выполняем клонирование удаленного Git-репозитория с GitHub на компьютер (рис. 5).
+```bash
+git clone git@github.com:sksi1217/BobrovLabs.git
+```
 <div align="center">
-  <img src="" alt="Запуск контейнеров" width="500">
-  <p>Рисунок 1 - Запуск контейнеров Docker</p>
+  <img src="https://github.com/user-attachments/assets/ed304ef8-59b7-4d82-8c3e-cf1846ed3d36" alt="Запуск контейнеров" width="500">
+  <p>Рисунок 5 - Клонирование репозитория</p>
 </div>
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Показывает полный путь (рис. 6).
 <div align="center">
-  <img src="" alt="Запуск контейнеров" width="500">
-  <p>Рисунок 1 - Запуск контейнеров Docker</p>
+  <img src="https://github.com/user-attachments/assets/18f91104-27cb-4b45-bfbb-210dbefee432" alt="Запуск контейнеров" width="500">
+  <p>Рисунок 6 - Путь</p>
 </div>
