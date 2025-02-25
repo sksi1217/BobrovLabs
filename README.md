@@ -360,8 +360,12 @@ git clone https://github.com/sksi1217/BobrovLabs.git
 </div>
 
 ---
+Команда выводит адрес текущего рабочего каталога:
+```bash
+pwd
+```
 
-Показывает полный путь (рис. 6).
+ (рис. 6).
 <div align="center">
   <img src="https://github.com/user-attachments/assets/18f91104-27cb-4b45-bfbb-210dbefee432" alt="Запуск контейнеров" width="500">
   <p>Рисунок 6 - Путь</p>
