@@ -350,7 +350,7 @@ sudo docker compose ps
 
 ---
 
-Командой выполняем клонирование удаленного Git-репозитория с GitHub на компьютер (рис. 5).
+Командой выполняем клонирование удаленного Git-репозитория с GitHub в папку (рис. 5).
 ```bash
 git clone https://github.com/sksi1217/BobrovLabs.git
 ```
