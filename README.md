@@ -374,7 +374,7 @@ pwd
 ---
 
 ```bash
-sudo mv BobrovLabs/prometeus.yaml grafana_stack_for_docker/
-sudo mv BobrovLabs/docker-compose.yaml grafana_stack_for_docker/
+mv BobrovLabs/prometeus.yaml ./
+mv BobrovLabs/docker-compose.yaml ./
 ```
 Перемещаем файлы в корень `grafana_stack_for_docker`
