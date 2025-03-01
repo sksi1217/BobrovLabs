@@ -383,6 +383,9 @@ mv BobrovLabs/docker-compose.yaml ./
 ## 5 Пара
 
 Перемещаем файл `prometeus.yaml` в `/mnt/common_volume/swarm/grafana/config/` заменяя предыдущий файл.
+
 ```bash
 sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
 ```
+
+Нужно переименовать файл правильным названием в `prometheus.yaml`
