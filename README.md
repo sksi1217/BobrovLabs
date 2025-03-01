@@ -395,3 +395,6 @@ sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
   <p>Рисунок 1 - Поводник</p>
 </div>
 
+Поднял `docker` через команду  
+
+Import 
