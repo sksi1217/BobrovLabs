@@ -377,7 +377,7 @@ pwd
 mv BobrovLabs/prometeus.yaml ./
 mv BobrovLabs/docker-compose.yaml ./
 ```
-Перемещаем файлы в корень `grafana_stack_for_docker`, но перед этим нужно сделать `Бэкап` придыдущего файла
+Перемещаем файлы в корень `grafana_stack_for_docker`, но перед этим нужно сделать `Бэкап` придыдущего файла.
 
 `Бэкап` - это резервная копия ценных данных, которая хранится отдельно от этих данных и может быть использована для их восстановления.
 
@@ -389,4 +389,9 @@ mv BobrovLabs/docker-compose.yaml ./
 sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
 ```
 
-Нужно переименовать файл правильным названием в `prometheus.yaml`
+Нужно переименовать файл правильным названием в `prometheus.yaml`, но перед этим нужно сделать `Бэкап` придыдущего файла `prometheus.yaml` (рис. 1).
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/55f9f934-dbc1-4c62-9d0b-c97562276996" alt="Запуск контейнеров" width="500">
+  <p>Рисунок 1 - Поводник</p>
+</div>
+
