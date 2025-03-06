@@ -416,3 +416,4 @@ Cоздав `Dashboards` импортируем его:
 В поле нужно написать `1860` -> `Load`
 `Select Prometheus` -> `Import` -> `Название Prometheus`
 
+Готово!
