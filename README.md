@@ -388,11 +388,27 @@ sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
 ```
 
 Нужно переименовать файл правильным названием в `prometheus.yaml`, но перед этим нужно сделать `Бэкап` придыдущего файла `prometheus.yaml` (рис. 1).
+
 <div align="center">
   <img src="https://github.com/user-attachments/assets/55f9f934-dbc1-4c62-9d0b-c97562276996" alt="Запуск контейнеров" width="500">
-  <p>Рисунок 1 - Поводник</p>
+  <p>Рисунок 1 - Бэкап</p>
 </div>
 
-Поднял `docker` через команду  
+Поднял контейнеры `Docker` через команду, для того чтобы зайти в него через браузер.
 
-Import 
+```bash
+sudo docker compose up -d
+```
+
+Чтобы зайти в него нужно прописать в поиске 
+```bash
+localhost:3000
+```
+
+После того как зашли, нужно создать `Dashboards`.
+Путь где его можно создать `Home -> Connections -> Data sources -> Add data source`
+ 
+
+Cоздав `Dashboards` импортируем его: 
+Путь где его можно импортировать `Home -> Dashboards -> Import dashboard`
+
