@@ -404,11 +404,24 @@ sudo docker compose up -d
 ```bash
 localhost:3000
 ```
+Пароль и логин: `admin` `admin`
 
 После того как зашли, нужно создать `Dashboards`.
 Путь где его можно создать `Home -> Connections -> Data sources -> Add data source`
- 
+
+
+Где нужно нажать на `+Add visualization` -> `Configure a new data source` -> `Prometheus`
+
+
+- Настройки:
+  - Connection: `http://prometheus:9090`
+  - Authentication: `Basic authentication`
+
+После того как все настроили нажимаем `Save & test`
 
 Cоздав `Dashboards` импортируем его: 
 Путь где его можно импортировать `Home -> Dashboards -> Import dashboard`
+
+В поле нужно написать `1860` -> `Load`
+`Select Prometheus` -> `Import` -> `Название Prometheus`
 
