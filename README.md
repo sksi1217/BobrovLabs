@@ -427,7 +427,15 @@ Cоздав `Dashboards` импортируем его:
   <p>Рисунок 2 - Результат</p>
 </div>
 
+---
 
+## 6 Пара
+
+![image](https://github.com/user-attachments/assets/98587646-38e4-42e0-abde-839e4160c8ed)
+
+![image](https://github.com/user-attachments/assets/d1a19ad1-1a61-4b97-9e34-767474ffedbf)
+
+![image](https://github.com/user-attachments/assets/e61171f2-964a-4d1f-a098-a84e0ac4861a)
 
 
 Готово!
