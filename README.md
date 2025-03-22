@@ -416,4 +416,9 @@ Cоздав `Dashboards` импортируем его:
 В поле нужно написать `1860` -> `Load`
 `Select Prometheus` -> `Import` -> `Название Prometheus`
 
+![image](https://github.com/user-attachments/assets/2417d6da-f281-4157-b092-45cf443d5184)
+
+![image](https://github.com/user-attachments/assets/c9d745b8-eea0-4d0d-9562-951532eb22de)
+
+
 Готово!
