@@ -413,12 +413,21 @@ localhost:3000
 Cоздав `Dashboards` импортируем его: 
 Путь где его можно импортировать `Home -> Dashboards -> Import dashboard`
 
-В поле нужно написать `1860` -> `Load`
+В поле нужно написать `1860` -> `Load` (рис. 1).
 `Select Prometheus` -> `Import` -> `Название Prometheus`
 
-![image](https://github.com/user-attachments/assets/2417d6da-f281-4157-b092-45cf443d5184)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/2417d6da-f281-4157-b092-45cf443d5184" alt="Импорт prometheus" width="500">
+  <p>Рисунок 1 - Импорт prometheus</p>
+</div>
 
-![image](https://github.com/user-attachments/assets/c9d745b8-eea0-4d0d-9562-951532eb22de)
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/c9d745b8-eea0-4d0d-9562-951532eb22de" alt="Результат" width="500">
+  <p>Рисунок 2 - Результат</p>
+</div>
+
+
 
 
 Готово!
