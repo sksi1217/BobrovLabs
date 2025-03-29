@@ -434,14 +434,14 @@ Cоздав `Dashboards` импортируем его:
 Ввел: `echo -e "# TYPE OILCOINT_metric1 gauge\nOILCOINT_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus`
   - команда отправляет бинарные данные
 
-Захом в Dashboards -> new -> new Dashboard -> Add visualization -> Configure a new data source -> Prometheus пишем http//:victoriametrics:8428
+Захом в Dashboards -> new -> new Dashboard -> Add visualization -> Configure a new data source -> Prometheus пишем http://victoriametrics:8428
 
 В `dashboards add visualition` выбираем то что создали снизу меняем на `code` Переходим в терминал и пишем: `light_metric1`
 
 Меняем значениея у меня: `12` `6` `24`
 
 ```bash
-echo -e "# TYPE OILCOINT_metric1 gauge\nOILCOINT_metric1 ЧИСЛО" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
+echo -e "# TYPE light_metric1 gauge\nlight_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
 ```
 
 ![image](https://github.com/user-attachments/assets/e61171f2-964a-4d1f-a098-a84e0ac4861a)
