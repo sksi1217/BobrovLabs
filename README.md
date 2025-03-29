@@ -431,11 +431,27 @@ Cоздав `Dashboards` импортируем его:
 
 ## 6 Пара
 
-![image](https://github.com/user-attachments/assets/98587646-38e4-42e0-abde-839e4160c8ed)
+Ввел: `echo -e "# TYPE OILCOINT_metric1 gauge\nOILCOINT_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus`
+  - команда отправляет бинарные данные
 
-![image](https://github.com/user-attachments/assets/d1a19ad1-1a61-4b97-9e34-767474ffedbf)
+Захом в Dashboards -> new -> new Dashboard -> Add visualization -> Configure a new data source -> Prometheus пишем http//:victoriametrics:8428
+
+В `dashboards add visualition` выбираем то что создали снизу меняем на `code` Переходим в терминал и пишем: `light_metric1`
+
+Меняем значениея у меня: `12` `6` `24`
+
+```bash
+echo -e "# TYPE OILCOINT_metric1 gauge\nOILCOINT_metric1 ЧИСЛО" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
+```
 
 ![image](https://github.com/user-attachments/assets/e61171f2-964a-4d1f-a098-a84e0ac4861a)
 
+График меняется:
+
+![image](https://github.com/user-attachments/assets/98587646-38e4-42e0-abde-839e4160c8ed)
+
+Cправа сверху в поисковую строчку и пишем `Connect null values` -> always Она соедит наши значение
+
+![image](https://github.com/user-attachments/assets/d1a19ad1-1a61-4b97-9e34-767474ffedbf)
 
 Готово!
