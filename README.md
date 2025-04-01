@@ -430,28 +430,74 @@ Cоздав `Dashboards` импортируем его:
 ---
 
 ## 6 Пара
+### Инструкция по отправке метрик в VictoriaMetrics и настройке графика в Grafana
 
-Ввел: `echo -e "# TYPE OILCOINT_metric1 gauge\nOILCOINT_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus`
-  - команда отправляет бинарные данные
+#### 1. Отправка метрик через терминал
+Сначала я отправил метрику `OILCOINT_metric1` со значением `0` в VictoriaMetrics, используя такую команду:
 
-Захом в Dashboards -> new -> new Dashboard -> Add visualization -> Configure a new data source -> Prometheus пишем http://victoriametrics:8428
+```bash
+echo -e "# TYPE OILCOINT_metric1 gauge\nOILCOINT_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
+```
 
-В `dashboards add visualition` выбираем то что создали снизу меняем на `code` Переходим в терминал и пишем: `light_metric1`
+Эта команда отправляет данные в формате Prometheus (текстовый формат метрик) на локальный сервер VictoriaMetrics, который у меня работает на порту `8428`.
 
-Меняем значениея у меня: `12` `6` `24`
+---
+
+#### 2. Настройка источника данных в Grafana
+Потом я зашел в Grafana и настроил источник данных:
+1. Я открыл Grafana в браузере.
+2. Перешел в раздел **Dashboards** → **New** → **New Dashboard**.
+3. Добавил новую визуализацию:
+   - Нажал **Add visualization**.
+   - Выбрал **Configure a new data source**.
+   - Указал тип источника данных **Prometheus**.
+   - В поле URL прописал адрес VictoriaMetrics:  
+     ```
+     http://victoriametrics:8428
+     ```
+
+---
+
+#### 3. Создание графика для метрики
+Затем я создал график для своей метрики `light_metric1`:
+1. В разделе **Dashboards** я добавил новую визуализацию.
+2. Переключился в режим редактирования на **Code** (код).
+3. В терминале я отправил новые значения для метрики `light_metric1`. Например, сначала отправил значение `0`:
 
 ```bash
 echo -e "# TYPE light_metric1 gauge\nlight_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
 ```
 
-![image](https://github.com/user-attachments/assets/e61171f2-964a-4d1f-a098-a84e0ac4861a)
+Потом я решил изменить значение метрики на `12`, `6` и `24`. Для этого я просто изменил цифру в команде и снова отправил данные (рис. 1):
 
-График меняется:
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e61171f2-964a-4d1f-a098-a84e0ac4861a" alt="Результат" width="500">
+  <p>Рисунок 1 - Изменение значения метрики</p>
+</div>
 
-![image](https://github.com/user-attachments/assets/98587646-38e4-42e0-abde-839e4160c8ed)
+```bash
+echo -e "# TYPE light_metric1 gauge\nlight_metric1 12" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
+```
 
-Cправа сверху в поисковую строчку и пишем `Connect null values` -> always Она соедит наши значение
+---
 
-![image](https://github.com/user-attachments/assets/d1a19ad1-1a61-4b97-9e34-767474ffedbf)
+#### 4. Просмотр изменений на графике (рис. 2)
+После отправки новых значений я увидел, как график начал обновляться. Но заметил, что между точками иногда появляются разрывы. Чтобы это исправить, я сделал следующее:
+1. В правом верхнем углу Grafana нашел строку поиска.
+2. Вбил туда параметр **Connect null values** и установил значение **Always**.
+3. После этого все точки графика соединились, и он стал выглядеть гладко (рис. 3).
 
-Готово!
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/98587646-38e4-42e0-abde-839e4160c8ed" alt="Результат" width="500">
+  <p>Рисунок 2 - Просмотр изменений на графике</p>
+</div>
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/d1a19ad1-1a61-4b97-9e34-767474ffedbf" alt="Результат" width="500">
+  <p>Рисунок 3 - Просмотр изменений на графике</p>
+</div>
+
+---
+
+#### 5. Готово!
+Теперь мой график корректно отображает изменения метрики `light_metric1`. Я могу продолжать отправлять новые значения через терминал и наблюдать за обновлениями в реальном времени.
