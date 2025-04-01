@@ -404,11 +404,25 @@ mv BobrovLabs/docker-compose.yaml ./
 
 ## 5 Пара
 
+## Содержание
+1. [Перемещение файла `prometeus.yaml`](#1-перемещение-файла-prometeusyaml)  
+2. [Создание бэкапа и переименование файла](#2-создание-бэкапа-и-переименование-файла)  
+3. [Запуск контейнеров Docker](#3-запуск-контейнеров-docker)  
+4. [Настройка Grafana через браузер](#4-настройка-grafana-через-браузер)  
+5. [Добавление источника данных Prometheus](#5-добавление-источника-данных-prometheus)  
+6. [Импорт дашборда](#6-импорт-дашборда)  
+
+### 1. Перемещение файла `prometeus.yaml`
+
 Перемещаем файл `prometeus.yaml` в `/mnt/common_volume/swarm/grafana/config/` заменяя предыдущий файл.
 
 ```bash
 sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
 ```
+
+---
+
+### 2. Создание бэкапа и переименование файла
 
 Нужно переименовать файл правильным названием в `prometheus.yaml`, но перед этим нужно сделать `Бэкап` придыдущего файла `prometheus.yaml` (рис. 1).
 
@@ -417,17 +431,29 @@ sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
   <p>Рисунок 1 - Бэкап</p>
 </div>
 
+---
+
+### 3. Запуск контейнеров Docker
+
 Поднял контейнеры `Docker` через команду, для того чтобы зайти в него через браузер.
 
 ```bash
 sudo docker compose up -d
 ```
 
+---
+
+### 4. Настройка Grafana через браузер
+
 Чтобы зайти в него нужно прописать в поиске 
 ```bash
 localhost:3000
 ```
 Пароль и логин: `admin` `admin`
+
+---
+
+### 5. Добавление источника данных Prometheus
 
 После того как зашли, нужно создать `Dashboards`.
 Путь где его можно создать `Home -> Connections -> Data sources -> Add data source`
@@ -441,6 +467,10 @@ localhost:3000
   - Authentication: `Basic authentication`
 
 После того как все настроили нажимаем `Save & test`
+
+---
+
+### 6. Импорт дашборда
 
 Cоздав `Dashboards` импортируем его: 
 Путь где его можно импортировать `Home -> Dashboards -> Import dashboard`
