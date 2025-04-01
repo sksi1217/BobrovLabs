@@ -73,8 +73,13 @@ wget --version
 
 
 ## 1. Установка `curl`
-  1. Устанавляваем `sudo yum install curl` (рис. 1).
-      - `curl` это инструмент для передачи данных с сервера или к серверу через URL.
+  1. Устанавляваем `curl` (рис. 1).
+    - `curl` это инструмент для передачи данных с сервера или к серверу через URL.
+     
+```bash
+sudo yum install curl
+```
+      
 <div align="center">
   <img src="https://github.com/user-attachments/assets/10457610-416e-4589-ad9f-9b2ca8e48a33" alt="Установка curl" width="500">
   <p>Рисунок 1 - Установка curl</p>
